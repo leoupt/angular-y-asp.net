@@ -1,0 +1,8 @@
+<app-rating (puntaje)=manejarPuntaje($event)></app-rating>
+    <h1>Cine videoCine</h1>
+
+    <h2>estrenos</h2>
+    <app-listado-pelicula [peliculas]="peliculas"></app-listado-pelicula>
+
+    <h2>proximas Peliculas</h2>
+    <app-listado-pelicula [peliculas]="peliculasProximas"></app-listado-pelicula>

@@ -1,0 +1,24 @@
+
+<div *ngIf="listado[0]===0"  >
+    <span #cargando>
+        <ng-content #select=[miimagencargando]></ng-content>
+    </span>
+    <span *ngIf="!cargando.innerHTML.trim()" >
+        <img class="imagen"   src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="">
+    </span>
+</div>
+    
+    
+<div *ngIf="listado[0]===1" >
+     <span #vacioso>
+         <ng-content select=[vacio]></ng-content>
+     </span>
+     <span *ngIf="!vacioso.innerHTML.trim()" >
+         no se encontro resultados
+     </span>
+</div>
+    
+<ng-container *ngIf="listado.length>1" >
+        <ng-content select=[contenido]></ng-content>
+        
+</ng-container>
