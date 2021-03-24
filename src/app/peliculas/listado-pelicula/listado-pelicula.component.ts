@@ -16,12 +16,7 @@ export class ListadoPeliculaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Comprobar(){
-    if(this.peliculas.length===0){
-      return false
-    }
-    return true
-  }
+  
   
 
 }

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  peliculas:any[]=[0];
-  peliculasProximas:any[]=[1];
+  peliculas:any;
+  peliculasProximas:any;
 
 
   ngOnInit(): void {
@@ -22,6 +22,7 @@ export class LandingPageComponent implements OnInit {
     precio:30,
     poster:'https://m.media-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_UX182_CR0,0,182,268_AL_.jpg'}
     ],2000)
+    this.peliculasProximas=[];
   }
   manejarPuntaje(puntaje:number){
     alert(puntaje);

@@ -1,5 +1,5 @@
 
-<div *ngIf="listado[0]===0"  >
+<div *ngIf="!listado"  >
     <span #cargando>
         <ng-content #select=[miimagencargando]></ng-content>
     </span>
@@ -9,7 +9,7 @@
 </div>
     
     
-<div *ngIf="listado[0]===1" >
+<div *ngIf="listado?.length===0" >
      <span #vacioso>
          <ng-content select=[vacio]></ng-content>
      </span>
@@ -18,7 +18,7 @@
      </span>
 </div>
     
-<ng-container *ngIf="listado.length>1" >
+<ng-container *ngIf="listado && listado.length>0" >
         <ng-content select=[contenido]></ng-content>
         
 </ng-container>

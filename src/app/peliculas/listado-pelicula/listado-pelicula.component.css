@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    margin:20px 0
 }
 .pelicula-contenedor{
     margin-right: 2%;

@@ -11,7 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListadoGenericoComponent implements OnInit {
 
-  @Input() listado:any[]=[];
+  @Input() listado:any;
   constructor() { }
 
   ngOnInit(): void {
