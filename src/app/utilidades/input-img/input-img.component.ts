@@ -10,7 +10,7 @@ export class InputImgComponent implements OnInit {
   
   imagenBase64!:string;
   @Output() archivoSeleccionado:EventEmitter<File>=new EventEmitter<File>();
-  @Input() URLImagenActual:string='';
+  @Input() URLImagenActual!:string;
   constructor() { } 
 
   ngOnInit(): void {

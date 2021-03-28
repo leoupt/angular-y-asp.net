@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ListadoPeliculaComponent } from './peliculas/listado-pelicula/listado-pelicula.component';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
 
 import { MaterialModule } from './material/material.module';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule,FormsModule } from "@angular/forms";
 
 import { RatingComponent } from './utilidades/rating/rating.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -29,6 +30,12 @@ import { FiltroPeliculasComponent } from './peliculas/filtro-peliculas/filtro-pe
 import { FormularioActoresComponent } from './actores/formulario-actores/formulario-actores.component';
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
+import { MarkdownModule } from 'ngx-markdown';
+import { FormularioCinesComponent } from './cines/formulario-cines/formulario-cines.component';
+import { LeafletModule } from "@asymmetrik/ngx-leaflet";
+import { MapaComponent } from './utilidades/mapa/mapa.component';
+import { FormularioPeliculasComponent } from './peliculas/formulario-peliculas/formulario-peliculas.component';
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 
 
 @NgModule({
@@ -54,14 +61,21 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
     FiltroPeliculasComponent,
     FormularioActoresComponent,
     InputImgComponent,
-    InputMarkdownComponent
+    InputMarkdownComponent,
+    FormularioCinesComponent,
+    MapaComponent,
+    FormularioPeliculasComponent,
+    SelectorMultipleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    LeafletModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

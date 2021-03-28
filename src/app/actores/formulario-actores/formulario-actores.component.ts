@@ -10,7 +10,7 @@ import { actorCreacionDTO,actorDTO } from '../actores.interface';
 export class FormularioActoresComponent implements OnInit {
   
   form!:FormGroup;
-  @Output() submit:EventEmitter<actorCreacionDTO>=new EventEmitter<actorCreacionDTO>();
+  @Output() OnSubmit:EventEmitter<actorCreacionDTO>=new EventEmitter<actorCreacionDTO>();
   @Input() modelo!:actorDTO;
   constructor(private formBuilder:FormBuilder) { }
 
@@ -18,7 +18,8 @@ export class FormularioActoresComponent implements OnInit {
     this.form=this.formBuilder.group({
       nombre:['',[Validators.required]],
       fechaNacimiento:'',
-      foto:''
+      foto:'',
+      biografia:''
     })
 
     if(this.modelo){
@@ -29,7 +30,10 @@ export class FormularioActoresComponent implements OnInit {
     this.form.get('foto')?.setValue(file);
   }
   onSubmit(){
-    this.submit.emit(this.form.value);
+    this.OnSubmit.emit(this.form.value);
+  }
+  cambioMarkdown(texto:string){
+    this.form.get('biografia')?.setValue(texto);
   }
 
 }

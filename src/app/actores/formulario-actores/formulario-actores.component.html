@@ -14,7 +14,7 @@
     <app-input-img (archivoSeleccionado)="archivoSeleccionado($event)"
     [URLImagenActual]="modelo.foto">
     </app-input-img>
-    <app-input-markdown></app-input-markdown>
+    <app-input-markdown (enviarMarkdown)="cambioMarkdown($event)" [placeHolderTextarea]="'Biografia'"></app-input-markdown>
     <button mat-flat-button color="primary" [disabled]="form.invalid">
         Guardar Cambios
     </button>
