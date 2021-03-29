@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { cineCreacionDTO } from '../cines.interface';
+import { cineCreacionDTO, cineDTO } from '../cines.interface';
 
 @Component({
   selector: 'app-crear-cine',
@@ -8,6 +8,7 @@ import { cineCreacionDTO } from '../cines.interface';
 })
 export class CrearCineComponent implements OnInit {
 
+  modelo:cineDTO={nombre:'',latitud:0,longitud:0};
   constructor() { }
 
   ngOnInit(): void {

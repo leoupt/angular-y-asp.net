@@ -15,7 +15,7 @@
     [URLImagenActual]="modelo.foto">
     </app-input-img>
     <app-input-markdown (enviarMarkdown)="cambioMarkdown($event)" [placeHolderTextarea]="'Biografia'"></app-input-markdown>
-    <button mat-flat-button color="primary" [disabled]="form.invalid">
+    <button type="button" mat-flat-button color="primary" [disabled]="form.invalid">
         Guardar Cambios
     </button>
     <a mat-stroked-button routerlink="/actores">Cancelar</a>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { actorCreacionDTO } from '../actores.interface';
+import { actorCreacionDTO, actorDTO } from '../actores.interface';
 
 @Component({
   selector: 'app-crear-actor',
@@ -8,6 +8,7 @@ import { actorCreacionDTO } from '../actores.interface';
 })
 export class CrearActorComponent implements OnInit {
 
+  modelo:actorDTO={nombre:'',fechaNacimiento:new Date('00-000-0000'),foto:''}
   constructor() { }
 
   ngOnInit(): void {

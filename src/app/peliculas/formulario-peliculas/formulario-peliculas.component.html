@@ -28,8 +28,13 @@
     <app-input-markdown [placeHolderTextarea]="'Resumen'" (enviarMarkdown)="enviarMarkdown($event)" [contenidoMarkDown]="modelo.resumen"></app-input-markdown>
 
     <h4>Seleccione los Generos</h4>
-    <app-selector-multiple></app-selector-multiple>
+    <app-selector-multiple [NoSeleccionados]="generosNoSeleccionados" [Seleccionados]="generosSeleccionados"></app-selector-multiple>
 
+    <h4>Seleccione los Cines</h4>
+    <app-selector-multiple [NoSeleccionados]="cinesNoSeleccionados" [Seleccionados]="cinesSeleccionados"></app-selector-multiple>
+
+    <h4>Seleccione los Actores</h4>
+    <app-autocomplete-actores></app-autocomplete-actores>
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">Guardar</button>
         <a mat-stroked-button routerLink="/" >Cancelar</a>

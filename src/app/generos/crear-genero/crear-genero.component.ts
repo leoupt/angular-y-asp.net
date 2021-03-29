@@ -10,6 +10,7 @@ import { generoCreacionDTO } from '../genros.interface';
 })
 export class CrearGeneroComponent {
   
+  modelo:generoCreacionDTO={nombre:''};
   constructor(private router:Router){
 
   }

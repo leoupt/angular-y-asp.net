@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { empty } from 'rxjs';
 import { PeliculaCreacionDTO, PeliculaDTO } from '../pelicula.';
 
 @Component({
@@ -8,7 +9,7 @@ import { PeliculaCreacionDTO, PeliculaDTO } from '../pelicula.';
 })
 export class CrearPeliculaComponent implements OnInit {
 
-  
+  modelo:PeliculaDTO={titulo:'',enCines:false,fechaLanzamiento:new Date(),resumen:'',poster:'',trailer:''};
   constructor() { }
   
   ngOnInit(): void {
